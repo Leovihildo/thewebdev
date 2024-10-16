@@ -1,2 +1,2 @@
 # thewebdev
- My online profile
+ Check out my online portfolio built with HTML, CSS, and JS.
