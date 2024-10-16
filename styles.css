@@ -145,7 +145,7 @@ nav#nav_scroll img{
     text-align: center;
 }
 #intro div.profile-img>img{
-    width: 60%;
+    width: 70%;
     height: 270px;
 }
 
@@ -348,6 +348,7 @@ section#intro div:nth-child(2){
 /* FOR SMALL DEVICES */
 @media (width <= 791px) {
     header>nav{
+        margin-top: 40px;
         bottom: 0;
     }
 }
