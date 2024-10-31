@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
 
 /* REUSABLE CLASSWS */
 *{
@@ -35,6 +35,11 @@ html{
     width: var(--container);
     padding: var(--container-padding);
 }
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .text-center{
     text-align: center;
 }
@@ -55,9 +60,13 @@ html{
 }
 section{
     margin-top: var(--section-height);
+    margin-bottom: 50px;
+}
+section div{
+    margin-top: 1.2rem;
 }
 a{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 h1 {
     font-size: var(--heading-fontsize);
@@ -74,6 +83,12 @@ li{
 header{
     padding: 8px;
 }
+header>nav, header>nav>div>ul{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
 header>nav{
     transition: all 1s ease-in-out;
     width: 100%;
@@ -83,14 +98,14 @@ header>nav{
     z-index: 9999;
     background-color: var(--main-bgcolour);
 }
-header>nav, header>nav>ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-}
-header>nav>ul{
+header>nav>div>ul{
     list-style-type: none;
+    margin-top: 20px;
+    /* height: 60px; */
+}
+header>nav>div>ul>li i{
+    color: var(--second-bgcolour);
+    font-size: var(--paragraph-fontsize);
 }
 nav#nav_scroll img{
     width: 60px;
@@ -152,7 +167,7 @@ nav#nav_scroll img{
 
 /* ABOUT */
 .edu-sections{
-    height: 380px;
+    height: 520px;
     font-size: var(--paragraph-fontsize);
 }
 .edu-exp{
@@ -209,6 +224,40 @@ nav#nav_scroll img{
     display: block;
 }
 
+/* PORTFOLIO SECTION */
+/* .carousel-item{
+    overflow: hidden; 
+} */
+.carousel-item iframe{
+    height: 380px;
+    border-bottom: 3px solid #000;
+    /* pointer-events: none;
+    scrollbar-width: none; */
+    zoom: 0.8; 
+    -moz-transform: scale(0.8); 
+    -moz-transform-origin: 0 0; 
+}
+.portfolio-description{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .6;
+    width: 100%;
+    height: 90px;
+    padding: 20px;
+    font-size: var(--paragraph-fontsize);
+}
+.portfolio-description>a{
+    color: #fff;
+    font-weight: 500;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: #000;
+    padding: 17px;
+    opacity: .4;
+}
+
 /* GALLERY SECTION */
 .gallery{
     margin: 40px auto;
@@ -240,25 +289,25 @@ nav#nav_scroll img{
     width: 180px;
     height: 16opx;
 }
-#contact .row{
+#contact .contact{
     margin: 40px;
     /* display: flex; */
 }
-#contact .row div{
+#contact .contact div{
     margin-bottom: var(--section-height);
 }
-#contact .row div.social-links{
+#contact .contact div.social-links{
     display: flex;
     justify-content: space-around;
     gap: 4rem
 }
-#contact .row div.social-links a:nth-child(1), #contact .row div.social-links a:nth-child(3){
+#contact .contact div.social-links a:nth-child(1), #contact .contact div.social-links a:nth-child(3){
     color: #000;
 }
-#contact .row div.social-links a:nth-child(2){
+#contact .contact div.social-links a:nth-child(2){
     color: rgba(64, 64, 206, 0.89);
 }
-#contact .row div.social-links a>i{
+#contact .contact div.social-links a>i{
     font-size: var(--heading-fontsize);
 }
 /* For large screens */
@@ -322,6 +371,15 @@ section#intro div:nth-child(2){
     border: 3px solid var(--second-bgcolour);
     border-radius: 30px;
 }
+/* ABOUT */
+.edu-sections{
+    height: 420px;
+}
+
+/* PORTFOLIO FOR LARGE SCREENS */
+.carousel-item iframe{
+    height: 420px;
+}
 
 /* GALLERY FOR LARGE SCREENS */
 #gallery .gallery>.row {
@@ -339,7 +397,7 @@ section#intro div:nth-child(2){
     transform: scale(1.5); 
 }
   /* CONTACT SECTION */
-#contact .row{
+#contact .contact{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -351,6 +409,8 @@ section#intro div:nth-child(2){
     header>nav{
         margin-top: 40px;
         bottom: 0;
+        justify-content: space-around;
+        gap: 1.4rem;
     }
 }
 

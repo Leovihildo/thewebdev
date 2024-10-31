@@ -7,6 +7,9 @@
     <link rel="icon" href="./Media/Brand Logo.png" type="image/icon type">
     <link rel="stylesheet" href="./styles.css">
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <!-- Fontawesome Icons -->
     <script src="https://kit.fontawesome.com/d2d33bd796.js" crossorigin="anonymous"></script>
 </head>
@@ -15,11 +18,23 @@
     <header>
         <nav id="nav_scroll">
             <img src="./Media/Brand Logo.png" alt="brand-img"/>
-            <ul>
-                <li><a href="#about">About me</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="d-none d-md-block">
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+           
+            <div class="d-lg-none">
+                <ul>
+                    <li><a href="#about"><i class="fas fa-user"></i></a></li>
+                    <li><a href="#portfolio"><i class="fas fa-briefcase"></i></a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i></a></li>
+                    <li><a href="#contact"><i class="fas fa-paper-plane"></i></a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -39,19 +54,19 @@
     <!-- WORK AND EDUCATIONAL EXPERIENCE -->
       <!-- ---ABOUT SECTION OF THE PAGE--- -->
     <section class="about-section section" id="about">
-        <div class="container row portfolio-container">
+        <div class="container portfolio-container">
             <!-- ----EDUCATION AND WORK EXPERIENCE---- -->
              <h1 class="text-center">About</h1>
              <hr class="underline">
             <div class="edu-exp">
                 <div class="edu-btn btn selected edu highlight" data-target="#education">
                     <i class="icon fas fa-graduation-cap exp-icon"></i>
-                    Education
+                    <h4>Education</h4>
                 </div>
 
                 <div class="edu-btn btn work" data-target="#work">
                     <i class="icon fas fa-briefcase exp-icon"></i>
-                    Work
+                    <h4>Work</h4> 
                 </div>
             </div>
 
@@ -174,6 +189,53 @@
         </div>
     </section>
 
+    <section class="container" id="portfolio">
+        <h1 class="text-center">Portfolio</h1>
+        <hr class="underline">
+
+        <!-- <div class="row portfolio-row">
+            <div class="pixonomi">
+                <iframe src="https://pixonomi.com/"></iframe>
+            </div>
+            <div class="pixonomi">
+                <iframe src="https://pixonomi.com/"></iframe>
+            </div>
+            <div class="pixonomi">
+                <iframe src="https://pixonomi.com/"></iframe>
+            </div>
+        </div> -->
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <iframe src="https://pixonomi.com/" class="d-block w-100" scrolling="no"></iframe>
+                <div class="portfolio-description text-center"><a href="https://pixonomi.com/">Pixonomi Website</a></div>
+              </div>
+
+              <div class="carousel-item">
+                <iframe src="https://leovihildo.github.io/VBC/index.html" class="d-block w-100" scrolling="no"></iframe>
+                <div class="portfolio-description text-center"><a href="https://leovihildo.github.io/VBC/index.html">VBC Employee Performance Web app</a></div>
+            </div>
+              <div class="carousel-item">
+                <iframe src="https://leovihildo.github.io/Holiday-planner/" class="d-block w-100" scrolling="no"></iframe>
+                <div class="portfolio-description text-center"><a href="https://leovihildo.github.io/Holiday-planner/">Holiday Planner Web app</a></div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
 
     <!-- GALLERY SECTION -->
      <section class="container" id="gallery">
@@ -201,7 +263,7 @@
         <h1 class="text-center">Contact me</h1>
         <hr class="underline">
 
-        <div class="row">
+        <div class="contact">
             <div>
                 <img src="./Media/Brand Logo.png" alt="brand-img"/>
             </div>
@@ -214,6 +276,7 @@
         
       </section>
 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
      <script src="./index.js"></script>
 </body>
 </html>
