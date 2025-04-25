@@ -162,7 +162,7 @@ nav#nav_scroll img{
 }
 #intro div.profile-img>img{
     width: 70%;
-    height: 270px;
+    height: auto;
 }
 
 /* ABOUT */
